@@ -12,20 +12,22 @@ specifiers:
   eslint: ^8.23.1
   next: ^12.3.1
   next-linaria: ^0.11.0
+  next-safe: ^3.2.1
   react: ^18.2.0
   react-dom: ^18.2.0
   typescript: ^4.8.3
   webpack: ^5.74.0
 
 dependencies:
+  '@linaria/atomic': 4.1.3_react@18.2.0
   '@linaria/core': 4.1.2
   '@linaria/react': 4.1.3_react@18.2.0
   next: 12.3.1_biqbaboplfbrettd7655fr4n2y
+  next-safe: 3.2.1_next@12.3.1
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
 
 devDependencies:
-  '@linaria/atomic': 4.1.3_react@18.2.0
   '@linaria/babel-preset': 4.2.0
   '@linaria/webpack-loader': 4.1.3_webpack@5.74.0
   '@types/react': 18.0.20
@@ -1396,7 +1398,7 @@ packages:
     transitivePeerDependencies:
       - react
       - supports-color
-    dev: true
+    dev: false
 
   /@linaria/babel-preset/4.2.0:
     resolution: {integrity: sha512-ksKnejBdA8cyLSzbx9WjgOm5sAfii1HF+R/BOlRMMurAQ7s4us4ab3ZnIYB/MddMiAYAswUxruGzrFLieZc9ag==}
@@ -1453,6 +1455,7 @@ packages:
       ts-invariant: 0.10.3
     transitivePeerDependencies:
       - supports-color
+    dev: false
 
   /@linaria/shaker/4.2.0:
     resolution: {integrity: sha512-1vRieI2SnGpKxQQ1rxlOoTY6girYWWw1R1AJSP6B6RyCb8GNvyhxyObWagLnQR/4e7fMCkbYlmV7Ipbhi5D8bA==}
@@ -3495,7 +3498,7 @@ packages:
 
   /known-css-properties/0.24.0:
     resolution: {integrity: sha512-RTSoaUAfLvpR357vWzAz/50Q/BmHfmE6ETSWfutT0AJiw10e6CmcdYRQJlLRd95B53D0Y2aD1jSxD3V3ySF+PA==}
-    dev: true
+    dev: false
 
   /language-subtag-registry/0.3.22:
     resolution: {integrity: sha512-tN0MCzyWnoz/4nHS6uxdlFWoUZT7ABptwKPQ52Ea7URk6vll88bWBVhodtnlfEuCcKWNGoc+uGbw1cwa9IKh/w==}
@@ -3676,6 +3679,7 @@ packages:
     resolution: {integrity: sha512-MqBkQh/OHTS2egovRtLk45wEyNXwF+cokD+1YPf9u5VfJiRdAiRwB2froX5Co9Rh20xs4siNPm8naNotSD6RBw==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
+    dev: false
 
   /natural-compare/1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
@@ -3690,6 +3694,14 @@ packages:
     peerDependencies:
       linaria: '*'
     dev: true
+
+  /next-safe/3.2.1_next@12.3.1:
+    resolution: {integrity: sha512-2BBbnendVIlbUjrvV/N6cotuba71i2IIczo0dqmpZu9oSl2PlN6hYML22fidcqXZILwghyXULIy4lxyAgPz+Xg==}
+    peerDependencies:
+      next: ^9.5.0 || ^10.2.1 || ^11.1.0
+    dependencies:
+      next: 12.3.1_biqbaboplfbrettd7655fr4n2y
+    dev: false
 
   /next/12.3.1_biqbaboplfbrettd7655fr4n2y:
     resolution: {integrity: sha512-l7bvmSeIwX5lp07WtIiP9u2ytZMv7jIeB8iacR28PuUEFG5j0HGAPnMqyG5kbZNBG2H7tRsrQ4HCjuMOPnANZw==}
@@ -3928,6 +3940,7 @@ packages:
       nanoid: 3.3.4
       picocolors: 1.0.0
       source-map-js: 1.0.2
+    dev: false
 
   /prelude-ls/1.2.1:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
@@ -3984,6 +3997,7 @@ packages:
     engines: {node: '>=0.10.0'}
     dependencies:
       loose-envify: 1.4.0
+    dev: false
 
   /readable-stream/2.3.7:
     resolution: {integrity: sha512-Ebho8K4jIbHAxnuxi7o42OrZgF/ZTNcsZj6nRKyUmkhLFq8CHItp/fy6hQZuZmP/n3yZ9VBUbp4zz/mX8hmYPw==}
@@ -4211,6 +4225,7 @@ packages:
   /source-map-js/1.0.2:
     resolution: {integrity: sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==}
     engines: {node: '>=0.10.0'}
+    dev: false
 
   /source-map-support/0.5.21:
     resolution: {integrity: sha512-uBHU3L3czsIyYXKX88fdrGovxdSCoTGDRZ6SYXtSRxLZUzHg5P/66Ht6uoUlHu9EZod+inXhKo3qQgwXUT/y1w==}
@@ -4319,7 +4334,6 @@ packages:
 
   /stylis/3.5.4:
     resolution: {integrity: sha512-8/3pSmthWM7lsPBKv7NXkzn2Uc9W7NotcwGNpJaa3k7WMM1XDCA4MgT5k/8BIexd5ydZdboXtU90XH9Ec4Bv/Q==}
-    dev: true
 
   /supports-color/5.5.0:
     resolution: {integrity: sha512-QjVjwdXIt408MIiAqCX4oUKsgU2EqAGzs2Ppkm4aQYbjm+ZEWEcW4SfFNTr4uMNZma0ey4f5lgLrkB0aX0QMow==}

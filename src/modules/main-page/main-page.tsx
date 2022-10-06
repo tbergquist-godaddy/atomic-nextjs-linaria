@@ -30,7 +30,12 @@ export default function MainPage(): JSX.Element {
         Atomic css is cool
       </Heading>
       <Box mt="md">
-        <Image className={image} src={thisIsFine} />
+        <Image
+          priority={true}
+          alt="Cartoon character drinking tea, saying this is fine"
+          className={image}
+          src={thisIsFine}
+        />
       </Box>
     </div>
   );

@@ -1,3 +1,5 @@
+const nextSafe = require('next-safe');
+
 function crossRules(rules) {
   for (const rule of rules) {
     if (typeof rule.loader === 'string' && rule.loader.includes('css-loader')) {
@@ -51,9 +53,19 @@ const withLinaria = (nextConfig = {}) => {
   };
 };
 
+const isDev = process.env.NODE_ENV !== 'production';
+
 const nextConfig = withLinaria({
   reactStrictMode: true,
   swcMinify: true,
+  async headers() {
+    return [
+      {
+        source: '/:path*',
+        headers: nextSafe({ isDev }),
+      },
+    ];
+  },
 });
 
 module.exports = nextConfig;
